@@ -21,10 +21,15 @@
             <div class="input-section">
                 <label for="text-input">請輸入文字內容</label>
                 <textarea id="text-input" placeholder="在這裡輸入任何中英文文章、詞彙，我們將為您產生獨一無二的文字雲..."></textarea>
-                <button id="generate-btn" class="primary-btn">
-                    <span>產生文字雲</span>
-                    <div class="btn-glow"></div>
-                </button>
+                <div class="button-group">
+                    <button id="generate-btn" class="primary-btn">
+                        <span>產生文字雲</span>
+                        <div class="btn-glow"></div>
+                    </button>
+                    <button id="save-btn" class="secondary-btn">
+                        <span>💾 儲存到雲端</span>
+                    </button>
+                </div>
             </div>
             
             <div class="output-section">
@@ -34,6 +39,13 @@
             </div>
         </main>
         
+        <section class="history-section">
+            <h2>☁️ 最近的雲端文字</h2>
+            <div id="history-container" class="history-grid">
+                <p class="loading-text">載入中...</p>
+            </div>
+        </section>
+        
         <footer>
             <p>Powered by Firebase & GitHub 🚀</p>
         </footer>
@@ -41,6 +53,6 @@
     
     <!-- Load wordcloud2.js from CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wordcloud2.js/1.2.2/wordcloud2.min.js"></script>
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>
